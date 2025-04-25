@@ -1,0 +1,1308 @@
+{
+	"info": {
+		"_postman_id": "83bc06e3-7122-436b-ae95-9847a0cd45b1",
+		"name": "PTC COMMON Domain",
+		"description": "PTC Common Domain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44415436"
+	},
+	"item": [
+		{
+			"name": "DownloadContentAsZip",
+			"item": [
+				{
+					"name": "Downloads content as zip",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "CSRF_NONCE",
+								"value": "<string>",
+								"description": "(Required) "
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"DownloadContentInfos\": [\n    {\n      \"EntityVersion\": \"<integer>\",\n      \"ContentNavigationProperty\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentNameSuffix\": \"<string>\",\n      \"ContentFormatFilter\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentHolder@odata.bind\": \"<string>\"\n    },\n    {\n      \"EntityVersion\": \"<integer>\",\n      \"ContentNavigationProperty\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentNameSuffix\": \"<string>\",\n      \"ContentFormatFilter\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentHolder@odata.bind\": \"<string>\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/DownloadContentAsZip?$select=<string>&$expand=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"DownloadContentAsZip"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "<string>"
+								},
+								{
+									"key": "$expand",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Downloads content as zip"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "CSRF_NONCE",
+										"value": "<string>",
+										"description": "(Required) "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"DownloadContentInfos\": [\n    {\n      \"EntityVersion\": \"<integer>\",\n      \"ContentNavigationProperty\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentNameSuffix\": \"<string>\",\n      \"ContentFormatFilter\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentHolder@odata.bind\": \"<string>\"\n    },\n    {\n      \"EntityVersion\": \"<integer>\",\n      \"ContentNavigationProperty\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentNameSuffix\": \"<string>\",\n      \"ContentFormatFilter\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"ContentHolder@odata.bind\": \"<string>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/DownloadContentAsZip?$select=<string>&$expand=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"DownloadContentAsZip"
+									],
+									"query": [
+										{
+											"key": "$select",
+											"value": "<string>"
+										},
+										{
+											"key": "$expand",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "<binary>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetAllStates()",
+			"item": [
+				{
+					"name": "Function to get a list of all valid lifecycle states in Windchill.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetAllStates()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetAllStates()"
+							]
+						},
+						"description": "Function to get a list of all valid lifecycle states in Windchill."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetAllStates()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetAllStates()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Items\": [\n    {\n      \"Value\": \"<string>\",\n      \"Display\": \"<string>\"\n    },\n    {\n      \"Value\": \"<string>\",\n      \"Display\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetCSRFToken()",
+			"item": [
+				{
+					"name": "This will return a CSRF Token (nonce) for this particular Windchill session.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetCSRFToken()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetCSRFToken()"
+							]
+						},
+						"description": "This will return a CSRF Token (nonce) for this particular Windchill session."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetCSRFToken()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetCSRFToken()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"NonceKey\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetDependencyGraphFlat()",
+			"item": [
+				{
+					"name": "Get all domain dependencies as a flat list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetDependencyGraphFlat()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetDependencyGraphFlat()"
+							]
+						},
+						"description": "Get all domain dependencies as a flat list"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetDependencyGraphFlat()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetDependencyGraphFlat()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"ParentDomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    },\n    {\n      \"ParentDomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetDependencyGraphFlat(DomainName=@DomainName,DomainVersion=@DomainVersion)",
+			"item": [
+				{
+					"name": "Get all domain dependencies as a flat list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetDependencyGraphFlat(DomainName=@DomainName,DomainVersion=@DomainVersion)?@DomainName=<string>&@DomainVersion=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetDependencyGraphFlat(DomainName=@DomainName,DomainVersion=@DomainVersion)"
+							],
+							"query": [
+								{
+									"key": "@DomainName",
+									"value": "<string>",
+									"description": "(Required) Domain name"
+								},
+								{
+									"key": "@DomainVersion",
+									"value": "<string>",
+									"description": "Domain version"
+								}
+							]
+						},
+						"description": "Get all domain dependencies as a flat list"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetDependencyGraphFlat(DomainName=@DomainName,DomainVersion=@DomainVersion)?@DomainName=<string>&@DomainVersion=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetDependencyGraphFlat(DomainName=@DomainName,DomainVersion=@DomainVersion)"
+									],
+									"query": [
+										{
+											"key": "@DomainName",
+											"value": "<string>",
+											"description": "(Required) Domain name"
+										},
+										{
+											"key": "@DomainVersion",
+											"value": "<string>",
+											"description": "Domain version"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"ParentDomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    },\n    {\n      \"ParentDomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetDependentDomains(DomainName=@DomainName,Depth=@Depth)",
+			"item": [
+				{
+					"name": "Get domains imported by a domain passed as a parameter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetDependentDomains(DomainName=@DomainName,Depth=@Depth)?@DomainName=<string>&@Depth=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetDependentDomains(DomainName=@DomainName,Depth=@Depth)"
+							],
+							"query": [
+								{
+									"key": "@DomainName",
+									"value": "<string>",
+									"description": "(Required) Domain name"
+								},
+								{
+									"key": "@Depth",
+									"value": "<string>",
+									"description": "Depth"
+								}
+							]
+						},
+						"description": "Get domains imported by a domain passed as a parameter"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetDependentDomains(DomainName=@DomainName,Depth=@Depth)?@DomainName=<string>&@Depth=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetDependentDomains(DomainName=@DomainName,Depth=@Depth)"
+									],
+									"query": [
+										{
+											"key": "@DomainName",
+											"value": "<string>",
+											"description": "(Required) Domain name"
+										},
+										{
+											"key": "@Depth",
+											"value": "<string>",
+											"description": "Depth"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"DependentDomains\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        }\n      ],\n      \"DomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    },\n    {\n      \"DependentDomains\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        }\n      ],\n      \"DomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetDependentDomains(DomainName=@DomainName,DomainVersion=@DomainVersion,Depth=@Depth)",
+			"item": [
+				{
+					"name": "Get domains imported by a domain passed as a parameter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetDependentDomains(DomainName=@DomainName,DomainVersion=@DomainVersion,Depth=@Depth)?@DomainName=<string>&@DomainVersion=<string>&@Depth=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetDependentDomains(DomainName=@DomainName,DomainVersion=@DomainVersion,Depth=@Depth)"
+							],
+							"query": [
+								{
+									"key": "@DomainName",
+									"value": "<string>",
+									"description": "(Required) Domain name"
+								},
+								{
+									"key": "@DomainVersion",
+									"value": "<string>",
+									"description": "Domain version"
+								},
+								{
+									"key": "@Depth",
+									"value": "<string>",
+									"description": "Depth"
+								}
+							]
+						},
+						"description": "Get domains imported by a domain passed as a parameter"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetDependentDomains(DomainName=@DomainName,DomainVersion=@DomainVersion,Depth=@Depth)?@DomainName=<string>&@DomainVersion=<string>&@Depth=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetDependentDomains(DomainName=@DomainName,DomainVersion=@DomainVersion,Depth=@Depth)"
+									],
+									"query": [
+										{
+											"key": "@DomainName",
+											"value": "<string>",
+											"description": "(Required) Domain name"
+										},
+										{
+											"key": "@DomainVersion",
+											"value": "<string>",
+											"description": "Domain version"
+										},
+										{
+											"key": "@Depth",
+											"value": "<string>",
+											"description": "Depth"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"DependentDomains\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        }\n      ],\n      \"DomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    },\n    {\n      \"DependentDomains\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/PTC.DomainDependencyInfo detected>\"\n        }\n      ],\n      \"DomainName\": \"<string>\",\n      \"CircularDependency\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetDocumentedDomains()",
+			"item": [
+				{
+					"name": "Returns a list of Domains that are included in the documentation tool",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetDocumentedDomains()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetDocumentedDomains()"
+							]
+						},
+						"description": "Returns a list of Domains that are included in the documentation tool"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetDocumentedDomains()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetDocumentedDomains()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"path\": \"<string>\"\n    },\n    {\n      \"path\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetEnumTypeConstraint(entityName=@entityName,propertyName=@propertyName)",
+			"item": [
+				{
+					"name": "Function to find valid Windchill enumerated value pairs. See PTC.EnumType.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetEnumTypeConstraint(entityName=@entityName,propertyName=@propertyName)?@entityName=<string>&@propertyName=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetEnumTypeConstraint(entityName=@entityName,propertyName=@propertyName)"
+							],
+							"query": [
+								{
+									"key": "@entityName",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "@propertyName",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Function to find valid Windchill enumerated value pairs. See PTC.EnumType."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetEnumTypeConstraint(entityName=@entityName,propertyName=@propertyName)?@entityName=<string>&@propertyName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetEnumTypeConstraint(entityName=@entityName,propertyName=@propertyName)"
+									],
+									"query": [
+										{
+											"key": "@entityName",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "@propertyName",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"LegalValues\": [\n    {\n      \"Value\": \"<string>\",\n      \"Display\": \"<string>\"\n    },\n    {\n      \"Value\": \"<string>\",\n      \"Display\": \"<string>\"\n    }\n  ],\n  \"DefaultValue\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetJWTFormRendererUrl()",
+			"item": [
+				{
+					"name": "Return the URL for JWT Form renderer servlet.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetJWTFormRendererUrl()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetJWTFormRendererUrl()"
+							]
+						},
+						"description": "Return the URL for JWT Form renderer servlet."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetJWTFormRendererUrl()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetJWTFormRendererUrl()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "<string>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillMetaInfo()",
+			"item": [
+				{
+					"name": "Function to get locale dependent Windchill metadata for entities and complex types present in a given domain.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillMetaInfo()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillMetaInfo()"
+							]
+						},
+						"description": "Function to get locale dependent Windchill metadata for entities and complex types present in a given domain."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillMetaInfo()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillMetaInfo()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"NonPersisted\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    },\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"InstanceBased\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillMetaInfo(EntityName=@EntityName)",
+			"item": [
+				{
+					"name": "Function to get locale dependent Windchill metadata for a given entity or complex type name.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName)?@EntityName=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillMetaInfo(EntityName=@EntityName)"
+							],
+							"query": [
+								{
+									"key": "@EntityName",
+									"value": "<string>",
+									"description": "(Required) The fully qualified entity or complex type name"
+								}
+							]
+						},
+						"description": "Function to get locale dependent Windchill metadata for a given entity or complex type name."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName)?@EntityName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillMetaInfo(EntityName=@EntityName)"
+									],
+									"query": [
+										{
+											"key": "@EntityName",
+											"value": "<string>",
+											"description": "(Required) The fully qualified entity or complex type name"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"NavigationPropertyInfo\": [\n    {\n      \"PropertyName\": \"<string>\"\n    },\n    {\n      \"PropertyName\": \"<string>\"\n    }\n  ],\n  \"EntityType\": \"<string>\",\n  \"IsEntityTypeComplex\": \"<boolean>\",\n  \"PropertyInfo\": [\n    {\n      \"PropertyType\": \"Unknown\",\n      \"PropertyName\": \"<string>\",\n      \"IsRichText\": \"<boolean>\"\n    },\n    {\n      \"PropertyType\": \"NonPersisted\",\n      \"PropertyName\": \"<string>\",\n      \"IsRichText\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillMetaInfo(EntityName=@EntityName,IncludeAncestorProperty=@IncludeAncestorProperty)",
+			"item": [
+				{
+					"name": "Function to get locale dependent Windchill metadata for a given entity or complex type name with option to include inherited properties for the entity or complex type.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName,IncludeAncestorProperty=@IncludeAncestorProperty)?@EntityName=<string>&@IncludeAncestorProperty=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillMetaInfo(EntityName=@EntityName,IncludeAncestorProperty=@IncludeAncestorProperty)"
+							],
+							"query": [
+								{
+									"key": "@EntityName",
+									"value": "<string>",
+									"description": "(Required) The fully qualified entity or complex type name"
+								},
+								{
+									"key": "@IncludeAncestorProperty",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Function to get locale dependent Windchill metadata for a given entity or complex type name with option to include inherited properties for the entity or complex type."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName,IncludeAncestorProperty=@IncludeAncestorProperty)?@EntityName=<string>&@IncludeAncestorProperty=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillMetaInfo(EntityName=@EntityName,IncludeAncestorProperty=@IncludeAncestorProperty)"
+									],
+									"query": [
+										{
+											"key": "@EntityName",
+											"value": "<string>",
+											"description": "(Required) The fully qualified entity or complex type name"
+										},
+										{
+											"key": "@IncludeAncestorProperty",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"NavigationPropertyInfo\": [\n    {\n      \"PropertyName\": \"<string>\"\n    },\n    {\n      \"PropertyName\": \"<string>\"\n    }\n  ],\n  \"EntityType\": \"<string>\",\n  \"IsEntityTypeComplex\": \"<boolean>\",\n  \"PropertyInfo\": [\n    {\n      \"PropertyType\": \"Unknown\",\n      \"PropertyName\": \"<string>\",\n      \"IsRichText\": \"<boolean>\"\n    },\n    {\n      \"PropertyType\": \"NonPersisted\",\n      \"PropertyName\": \"<string>\",\n      \"IsRichText\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillMetaInfo(EntityName=@EntityName,IncludeDescendants=@IncludeDescendants)",
+			"item": [
+				{
+					"name": "Function to get locale dependent Windchill metadata for a given entity or complex type name with option to include inherited properties for the entity or complex type.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName,IncludeDescendants=@IncludeDescendants)?@EntityName=<string>&@IncludeDescendants=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillMetaInfo(EntityName=@EntityName,IncludeDescendants=@IncludeDescendants)"
+							],
+							"query": [
+								{
+									"key": "@EntityName",
+									"value": "<string>",
+									"description": "(Required) The fully qualified entity or complex type name"
+								},
+								{
+									"key": "@IncludeDescendants",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Function to get locale dependent Windchill metadata for a given entity or complex type name with option to include inherited properties for the entity or complex type."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillMetaInfo(EntityName=@EntityName,IncludeDescendants=@IncludeDescendants)?@EntityName=<string>&@IncludeDescendants=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillMetaInfo(EntityName=@EntityName,IncludeDescendants=@IncludeDescendants)"
+									],
+									"query": [
+										{
+											"key": "@EntityName",
+											"value": "<string>",
+											"description": "(Required) The fully qualified entity or complex type name"
+										},
+										{
+											"key": "@IncludeDescendants",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"NonPersisted\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    },\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"InstanceBased\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillMetaInfo(IncludeAncestorProperty=@IncludeAncestorProperty)",
+			"item": [
+				{
+					"name": "Function to get locale dependent Windchill metadata for entities and complex types present in a given domain with option to include inherited properties for the entities and complex types.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillMetaInfo(IncludeAncestorProperty=@IncludeAncestorProperty)?@IncludeAncestorProperty=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillMetaInfo(IncludeAncestorProperty=@IncludeAncestorProperty)"
+							],
+							"query": [
+								{
+									"key": "@IncludeAncestorProperty",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Function to get locale dependent Windchill metadata for entities and complex types present in a given domain with option to include inherited properties for the entities and complex types."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillMetaInfo(IncludeAncestorProperty=@IncludeAncestorProperty)?@IncludeAncestorProperty=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillMetaInfo(IncludeAncestorProperty=@IncludeAncestorProperty)"
+									],
+									"query": [
+										{
+											"key": "@IncludeAncestorProperty",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"NonPersisted\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    },\n    {\n      \"NavigationPropertyInfo\": [\n        {\n          \"PropertyName\": \"<string>\"\n        },\n        {\n          \"PropertyName\": \"<string>\"\n        }\n      ],\n      \"EntityType\": \"<string>\",\n      \"IsEntityTypeComplex\": \"<boolean>\",\n      \"PropertyInfo\": [\n        {\n          \"PropertyType\": \"Unknown\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        },\n        {\n          \"PropertyType\": \"InstanceBased\",\n          \"PropertyName\": \"<string>\",\n          \"IsRichText\": \"<boolean>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetWindchillVersion()",
+			"item": [
+				{
+					"name": "This function returns a list of ComplexType, each complex type representing an installed module with its version.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/GetWindchillVersion()",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GetWindchillVersion()"
+							]
+						},
+						"description": "This function returns a list of ComplexType, each complex type representing an installed module with its version."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/GetWindchillVersion()",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"GetWindchillVersion()"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"value\": [\n    {\n      \"AssemblyId\": \"<string>\"\n    },\n    {\n      \"AssemblyId\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "IsAssemblyInstalled(assemblyName=@assemblyName)",
+			"item": [
+				{
+					"name": "This will check if particular assembly is installed or not.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/IsAssemblyInstalled(assemblyName=@assemblyName)?@assemblyName=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"IsAssemblyInstalled(assemblyName=@assemblyName)"
+							],
+							"query": [
+								{
+									"key": "@assemblyName",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "This will check if particular assembly is installed or not."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/IsAssemblyInstalled(assemblyName=@assemblyName)?@assemblyName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"IsAssemblyInstalled(assemblyName=@assemblyName)"
+									],
+									"query": [
+										{
+											"key": "@assemblyName",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "<boolean>"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://pp-2504240936dd.portal.ptc.io/Windchill/servlet/odata/v5/PTC"
+		}
+	]
+}
