@@ -1,10 +1,19 @@
 # wrs
 windchill rest services
 
+# spec
+- corretto-21.0.6
+- SpringBoot 3.4.4
+- javax.servlet:jstl:1.2
+- lombok
+
 # 접속주소
 http://localhost:8080/main
 
-
+# 실행 방법
+```
+gradlew bootRun
+```
 
 # REST SERVICE URL
 ## Cloud
