@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.4.4'
     id 'io.spring.dependency-management' version '1.1.7'
+    id "org.openapi.generator" version "7.12.0"
 }
 
 group = 'com.revy'
@@ -41,3 +42,19 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+/* openApi codegen 이용 API 자동 생성 테스트
+openApiGenerate {
+    generatorName = "java"                                 // Spring 서버 스텁
+    inputSpec       = "$projectDir/swagger_api/PTC_ProdMgmt.json"       // 스펙 파일 경로
+    outputDir       = "$buildDir/ptc-api-service"           // ① 생성될 프로젝트 루트
+    skipValidateSpec = true
+    apiPackage.set("com.revy.windchill.rest.service.prodmgmt")
+    invokerPackage.set("com.revy.windchill.rest.service.prodmgmt.invoker")
+    modelPackage.set("com.revy.windchill.rest.service.prodmgmt.model")
+    configOptions = [
+            sourceFolder: "src/gen/java/main"                   // ② 소스 위치 지정
+    ]
+    // 필요 시 apiPackage, modelPackage, basePackage 등 추가 설정 가능
+}
+ */
