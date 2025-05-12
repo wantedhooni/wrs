@@ -26,6 +26,9 @@ https://pp-2504240936dd.portal.ptc.io/Windchill/netmarkets/html/wrs/doc.html
 - [ ] Folder 및 객체 Tree 구조로 수정
 - [ ] Part에 지정된 Baseline 정보 가져오기
 - [ ] Part에 Baseline 생성하기
+- [ ] 인증 SSO 또는 JWT로 수정해야 사용 가능 할거 같음
+- [ ] 세션추가 (스프링 시큐리티 붙이기)
+
 # 작업 진행 내용
 
 - Product Container, Cabinet, Contents 조회
